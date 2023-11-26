@@ -5,12 +5,21 @@
 	use Dompdf\Dompdf;
 	use Dompdf\Options;
 
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$address = $_POST['address'];
+	$phone = $_POST['phone'];
+
 	$options = new Options;
 	$options->setChroot(__DIR__);
 
 	$pdf = new Dompdf($options);
 
-	$html = '<h1>Invoice</h1>';
+	$html = "<h5>Name: $name </h5>";
+	$html .= "<h5>Email: $email </h5>";
+	$html .= "<h5>Phone: $phone </h5>";
+	$html .= "<h5>Address: $address </h5>";
+
 
 	$pdf->loadHTML($html);
 
