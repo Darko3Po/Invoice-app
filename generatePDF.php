@@ -15,15 +15,13 @@
 
 	$pdf = new Dompdf($options);
 
-	$html = "<h5>Name: $name </h5>";
-	$html .= "<h5>Email: $email </h5>";
-	$html .= "<h5>Phone: $phone </h5>";
-	$html .= "<h5>Address: $address </h5>";
-
-
-	$pdf->loadHTML($html);
-
 	$pdf->setPaper('A4','portrait');
+
+	$html = file_get_contents('template.html');
+
+	$html = str_replace(["{{ name }}","{{ email }}"],[$name, $email], $html);
+
+	$pdf->loadHtml($html); 
 
 	$pdf->render();
 
