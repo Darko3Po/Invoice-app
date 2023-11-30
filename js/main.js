@@ -6,6 +6,7 @@ function addNewRow() {
 
 
   var cell0 = newRow.insertCell(0);
+  cell0.name = "id_product";
   cell0.innerHTML = ++rowCount;
   var cell1 = newRow.insertCell(1);
   var cell2 = newRow.insertCell(2);
@@ -13,8 +14,8 @@ function addNewRow() {
 
   var input1 = document.createElement("input");
   input1.type = "text";
-  input1.placeholder = "Description";
-  input1.name = "description_" + rowCount;
+  input1.placeholder = "Product name";
+  input1.name = "name_product_" + rowCount;
   input1.className = "form-control";
   
   var input2 = document.createElement("input");
