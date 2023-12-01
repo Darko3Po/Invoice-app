@@ -76,18 +76,23 @@
 				</thead>
 				<tbody style="border-bottom: #333 1px soli; padding: 2px;">
 					<tr>
-						<td></td>
+						<td>1</td>
 						<td>{{ name_product_1 }}</td>
 						<td>{{ rate_1 }}</td>
 						<td>{{ qty_1 }}</td>
 						<td>{{ amount_1 }}</td>
 					</tr>
+						<tr>
+						<td>2</td>
+						<td>{{ name_product_2 }}</td>
+						<td>{{ rate_2 }}</td>
+						<td>{{ qty_2 }}</td>
+						<td>{{ amount_2 }}</td>
+					</tr>
+					}
 				</tbody>
 			</table>
 			
-			<?php foreach ($stavke as $item): ?>
-				<h4>$item</h4>
-			<?php endforeach; ?>
 	</div>	
 
 
