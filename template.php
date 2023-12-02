@@ -82,14 +82,21 @@
 						<td>{{ qty_1 }}</td>
 						<td>{{ amount_1 }}</td>
 					</tr>
-						<tr>
+					<tr>
 						<td>2</td>
 						<td>{{ name_product_2 }}</td>
 						<td>{{ rate_2 }}</td>
 						<td>{{ qty_2 }}</td>
 						<td>{{ amount_2 }}</td>
 					</tr>
-					}
+					<tr style="margin-left: auto;">
+						<td style="display: none;"></td>
+						<td></td>
+						<td></td>
+						<td>Subtotal</td>
+						<td>2200</td>
+					</tr>
+
 				</tbody>
 			</table>
 			
