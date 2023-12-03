@@ -16,7 +16,7 @@
 			}
 
 			#customers td, #customers th {
-			  border: 1px solid #ddd;
+			  border: 1px 0 0 0 solid #ddd;
 			  padding: 8px;
 			}
 
@@ -89,14 +89,20 @@
 						<td>{{ qty_2 }}</td>
 						<td>{{ amount_2 }}</td>
 					</tr>
-					<tr style="margin-left: auto;">
-						<td style="display: none;"></td>
+					<tr>
+						<td>3</td>
+						<td>{{ name_product_3 }}</td>
+						<td>{{ rate_3 }}</td>
+						<td>{{ qty_3 }}</td>
+						<td>{{ amount_3 }}</td>
+					</tr>	
+					<tr>
+						<td></td>
 						<td></td>
 						<td></td>
 						<td>Subtotal</td>
-						<td>2200</td>
+						<td>{{ subtotal }}</td>
 					</tr>
-
 				</tbody>
 			</table>
 			

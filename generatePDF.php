@@ -36,10 +36,12 @@
 	$name_product_3 = $_POST['name_product_3'];
 	$rate_3 = $_POST['rate_3'];
 	$qty_3 = $_POST['qty_3'];
+	$amount_3 = $rate_3 * $qty_3;
+
+	$subtotal = $amount_1 + $amount_2 + $amount_3;
 
 
 	$stavke = array("Description"=>"Loremispum","Price"=>"35","quantity"=>"10");
-
 
 	$options = new Options;
 	$options->setChroot(__DIR__);
@@ -50,7 +52,7 @@
 
 	$html = file_get_contents('template.php');
 
-	$html = str_replace(["{{ stavke }}","{{ invoice_name }}","{{ number_invoice }}","{{ date_invoice }}","{{ your_name }}","{{ your_email }}","{{ your_address }}","{{ your_phone }}","{{ client_name }}","{{ client_email }}","{{ client_address }}","{{ client_phone }}","{{ name_product_1 }}","{{ rate_1 }}","{{ qty_1 }}","{{ amount_1 }}","{{ id_product }}","{{ name_product_2 }}","{{ rate_2 }}","{{ qty_2 }}","{{ amount_2 }}"],[$stavke,$invoice_name,$number_invoice,$date_invoice,$your_name, $your_email, $your_address,$your_phone,$client_name, $client_email, $client_address,$client_phone,$name_product_1,$rate_1,$qty_1,$amount_1,$id_product, $name_product_2,$rate_2,$qty_2,$amount_2], $html);
+	$html = str_replace(["{{ stavke }}","{{ invoice_name }}","{{ number_invoice }}","{{ date_invoice }}","{{ your_name }}","{{ your_email }}","{{ your_address }}","{{ your_phone }}","{{ client_name }}","{{ client_email }}","{{ client_address }}","{{ client_phone }}","{{ name_product_1 }}","{{ rate_1 }}","{{ qty_1 }}","{{ amount_1 }}","{{ id_product }}","{{ name_product_2 }}","{{ rate_2 }}","{{ qty_2 }}","{{ amount_2 }}","{{ name_product_3 }}","{{ rate_3 }}","{{ qty_3 }}","{{ amount_3 }}","{{ subtotal }}"],[$stavke,$invoice_name,$number_invoice,$date_invoice,$your_name, $your_email, $your_address,$your_phone,$client_name,$client_email,$client_address,$client_phone,$name_product_1,$rate_1,$qty_1,$amount_1,$id_product,$name_product_2,$rate_2,$qty_2,$amount_2,$name_product_3,$rate_3,$qty_3,$amount_3,$subtotal], $html);
 
 	$pdf->loadHtml($html); 
 
